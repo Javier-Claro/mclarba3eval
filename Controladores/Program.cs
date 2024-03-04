@@ -57,6 +57,7 @@ namespace Mclarba3eval.Controladores
                                 break;
 
                             case 3:
+                                Console.WriteLine("\n\tMuchas gracias, hasta luego.");
                                 break;
                         }
                         break;                 
