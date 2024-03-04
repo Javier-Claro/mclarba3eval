@@ -20,32 +20,48 @@ namespace Mclarba3eval.Controladores
 
                 OperativaIntfz patata = new OperativaImpl();
 
-                menu.MenuVenta(opcion);
+                menu.MenuPrincipal(opcion);
                 Console.Clear();
                 switch (opcion)
                 {
                     case 1:
-                        patata.añadirVenta();
+                        menu.MenuGerencia(opcion);
+                        Console.Clear();
+                        switch (opcion)
+                        {
+                            case 1:
+                                patata.añadirVenta();
+                                break;
+
+                            case 2:
+                                patata.calculoTotalVentasDia();
+                                break;
+
+                            case 3:
+                                Console.WriteLine("\n\tMuchas gracias, hasta luego.");
+                                break;
+                        }
                         break;
 
                     case 2:
-                        patata.calculoTotalVentasDia();
-                        break;
+                        menu.MenuEmpleado(opcion);
 
-                    case 3:
-                        patata.mostrarVentasDia();
-                        break;
+                        switch (opcion)
+                        {
+                            case 1:
+                                patata.mostrarVentasDia();
+                                break;
 
-                    case 4:
-                        patata.crearPedidoProveedores();
-                        break;
+                            case 2:
+                                patata.crearPedidoProveedores();
+                                break;
 
-                    case 5:                        
-                        Console.WriteLine("\n\tGracias, hasta luego.");
-                        break;
+                            case 3:
+                                break;
+                        }
+                        break;                 
                 }
-
-            }while (opcion != 5);
+            }while (opcion != 3);
         }
     }
 }

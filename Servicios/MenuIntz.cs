@@ -8,6 +8,10 @@ namespace Mclarba3eval.Servicios
 {
     internal interface MenuIntz
     {
-        public int MenuVenta(int opcion);
+        public int MenuPrincipal(int opcion);
+
+        public int MenuEmpleado(int opcion);
+
+        public int MenuGerencia(int opcion);
     }
 }
